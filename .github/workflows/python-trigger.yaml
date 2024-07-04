@@ -28,5 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker Run
-        run: echo docker run -p -d 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+        run: | 
+        ls -lrta
+        echo docker run -p -d 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
          
