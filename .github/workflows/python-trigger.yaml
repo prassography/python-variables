@@ -10,6 +10,8 @@ env:
  CONTAINER_REGISTRY: docker.io
  IMAGE_NAME: github-actions-nginx
 
+#test 
+
 jobs:
   docker-build:
     runs-on: ubuntu-latest
@@ -28,7 +30,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker Run
-        run: | 
-        ls -lrta
-        echo docker run -p -d 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+        run: echo docker run -p -d 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
          
